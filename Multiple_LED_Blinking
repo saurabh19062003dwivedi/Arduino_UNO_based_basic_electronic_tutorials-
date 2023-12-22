@@ -1,0 +1,41 @@
+
+int led_red=13;
+
+int led_green=12;
+
+int led_white=11;
+
+void setup() {
+
+// put your setup code here, to run once:
+
+pinMode(led_red, OUTPUT);
+
+pinMode(led_green, OUTPUT);
+
+pinMode(led_white, OUTPUT);
+}
+
+ void loop() {
+
+// put your main code here, to run repeatedly:
+
+digitalWrite(led_red, HIGH);//it will send data as 1 to turn on the led
+delay(1000);
+
+digitalWrite(led_red, LOW);//it will be sending data as o to turn off the led
+delay(1000);
+
+digitalWrite(led_green, HIGH);//it will send data as 1 to turn on the led
+delay(1000);
+
+digitalWrite(led_green, LOW);//it will be sending data as 0 to turn off the led
+delay(1000);
+
+digitalWrite(led_white, HIGH);//it will send data as 1 to turn on the led
+
+delay(1000);
+
+digitalWrite(led_white, LOW);//it will be sending data as o to turn off the led
+delay(1000);
+ }
