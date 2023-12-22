@@ -1,0 +1,53 @@
+ int PIR=8;//get the input from the motion sensor/PIR
+
+int relay1=12;
+
+int state  =LOW;
+
+int val= 0;
+
+void setup(){
+
+// put your setup code here, to run once:
+
+pinMode (relay1, OUTPUT);
+
+pinMode (PIR, INPUT);
+
+Serial.begin(9600);
+}
+
+void loop(){
+
+// put your main code here, to run repeatedly:
+
+val= digitalRead(PIR);
+
+  if (val== HIGH) {
+
+digitalWrite(relay1, LOW);// turn on the lamp
+
+delay(500);
+
+    if (state == LOW) {
+
+Serial.println("Motion detected!");// it will print on serial monitor
+state = HIGH;// updating the state
+  
+  }
+  }
+  else{
+
+digitalWrite(relay1, HIGH);//turn off the lamp
+delay(500);
+
+if (state == HIGH) {
+
+Serial.println("Motion Stopped");//printng
+
+  state=LOW;//updating the state
+}
+  }
+}
+
+  
