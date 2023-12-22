@@ -1,0 +1,20 @@
+
+void setup() {
+
+// put your setup code here, to run once:
+
+pinMode(LED_BUILTIN, OUTPUT);
+
+
+}
+
+void loop(){
+
+// put your main code here, to run repeatedly:
+
+digitalWrite(LED_BUILTIN, HIGH);//it will send data as I to turn on the led
+delay(1000);
+
+digitalWrite(LED_BUILTIN, LOW);//it will be sending data as o to turn off the led
+delay(1000);
+}
