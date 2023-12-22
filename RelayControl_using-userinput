@@ -1,0 +1,96 @@
+ int relay1=12;
+
+int relay2=11;
+
+int relay3=10;
+
+int relay4=9;
+
+char input;
+
+void setup() {
+
+// put your setup code here, to run
+
+Serial.begin(9600);
+
+pinMode (relay1, OUTPUT);
+
+pinMode (relay2, OUTPUT);
+
+pinMode (relay3, OUTPUT);
+
+pinMode (relay4, OUTPUT);
+
+Serial.print("Press Y Relay1 to Turn on  \n Press N for relay1 to turn off\nPress O Relay2 to Turn on  \n Press F for relay2 to turn off\nPress 1 Relay3 to Turn on  \n Press 0 for relay3 to turn off\nPress o Relay4 to Turn on  \n Press f for relay4 to turn off\n");
+
+}
+
+
+void loop() {
+
+// put your main code here, to run repeatedly:
+
+input = Serial.read();
+
+  if (input == 'Y') {
+
+digitalWrite(relay1, LOW);
+  }
+
+if(input == 'N') {
+
+digitalWrite(relay1, HIGH);
+
+}
+
+if (input == 'O') {
+
+digitalWrite(relay2, LOW);
+
+}
+
+if (input == 'F') {
+
+  digitalWrite(relay2, HIGH);
+}
+  
+  
+  if (input == '1') {
+
+digitalWrite(relay3, LOW);
+
+}
+
+if (input == '0') {
+
+  digitalWrite(relay3, HIGH);
+}
+  if (input == 'o') {
+
+digitalWrite(relay4, LOW);
+
+}
+
+if (input == 'f') {
+
+  digitalWrite(relay4, HIGH);
+}
+  
+  if (input == 'A'){
+    digitalWrite(relay1, LOW);
+    digitalWrite(relay2, LOW);
+    digitalWrite(relay3, LOW);
+    digitalWrite(relay4, LOW);
+  }
+   if (input == 'a'){
+    digitalWrite(relay1, HIGH);
+    digitalWrite(relay2, HIGH);
+    digitalWrite(relay3, HIGH);
+    digitalWrite(relay4, HIGH);
+  }
+  
+  
+  }
+  
+  
